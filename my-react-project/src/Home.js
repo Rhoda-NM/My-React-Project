@@ -21,8 +21,8 @@ function Home() {
             <h2>Our Locations</h2>
 
             <ul id="location">
-                {locations.map((location) => {
-                    return <li key={location.building}>{location.building} - {location.address} - {location.city}</li> 
+                {locations.map((location ) => {
+                    return <li key={location.building}> location: {location.building} address: {location.address} - {location.city}</li> 
                 })}
             </ul>
             </div>

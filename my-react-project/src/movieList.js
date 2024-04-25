@@ -6,7 +6,7 @@ function Movies({movies}) {
         return <MovieItem
             key={movie.id}
             title={movie.title}
-            pster={movie.poster}
+            poster={movie.poster}
             description={movie.description}
             showtime={movie.showtime}
             capacity={movie.capacity}

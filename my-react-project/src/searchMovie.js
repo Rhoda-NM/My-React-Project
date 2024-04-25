@@ -1,14 +1,17 @@
 import React, { useState} from "react";
 
-function SearchMovies(props){
+function SearchMovies({movies}){
+    console.log(movies);
     const [searchMovie, setSearchMovie] = useState('');
     const [movieResult, setMovieResult] = useState([]);
 
-    function handleChange(e) {
+    const handleChange = (e) => {
         setSearchMovie(e.target.value);
     };
-    function handleSearch() {
-        const filteredMovies = props.filter((movie) => movie.title.toLowerCase().includes(searchMovie.toLowerCase()));
+    const handleSearch = () => {
+        const filteredMovies = movies.filter(movie => 
+             movie.title.toLowerCase().includes(searchMovie.toLowerCase())
+        );
         setMovieResult(filteredMovies);
     }
 
@@ -27,7 +30,7 @@ function SearchMovies(props){
                     <p>{movie.description}</p>
                 </li>
             })}
-        </ul>
+            </ul>
         </div>
     )
 

@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Home />
-      <SearchMovies props={data}/>
+      <SearchMovies movies={data}/>
       <Movies movies={data} />
     </>
   );

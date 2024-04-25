@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-function MovieItem({title, description, showtime, capacity, poster="https://www.gstatic.com/tv/thumb/v22vodart/40518/p40518_v_v8_aa.jpg"}) {
+function MovieItem({title, description, 
+    showtime, capacity, 
+    poster="https://www.gstatic.com/tv/thumb/v22vodart/40518/p40518_v_v8_aa.jpg"})
+{
     const [movieCapacity, setMovieCapacity] = useState(capacity)
     function handleChange() {
         setMovieCapacity(prevCapacity => prevCapacity - 1);
